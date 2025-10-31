@@ -29,6 +29,11 @@ function mostrarLogin() {
         // Valido solo letras y numeros
         const letrasYNumeros = /^[A-Za-z0-9]+$/;
 
+        if (!usuario) {
+            alert("⚙️ El usuario no puede estar vacío");
+            return;
+        }
+        
         if (!letrasYNumeros.test(contrasenia)) {
             alert("⚙️ La contraseña solo puede contener letras y números.");
             return;
