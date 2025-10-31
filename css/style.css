@@ -1,0 +1,404 @@
+/* style.css */
+
+/* Estilos generales */
+main {
+    position: relative;
+    width: 90%;
+    height: 90vh;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c4c4c4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#login-section,
+#bienvenida-section,
+#juego-section,
+#resultado-section {
+    /* Oculto los sections para luego mostrarlos desde jQuery */
+    display: none;
+}
+
+#login-section {
+    height: 90vh;
+    align-content: center;
+}
+
+.titulo {
+    display: flex;
+    background-color: #c41e1e;
+    font-style: italic;
+    color: white;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.titulo h1 {
+    margin-bottom: 0;
+}
+
+#z {
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+    top: -20px;
+    vertical-align: middle;
+}
+
+.mazinger-login {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.img-mazinger-login {
+    position: absolute;
+    bottom: 0;
+    right: -10rem;
+    height: 100%;
+    z-index: 1;
+}
+
+#login-form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #f0db39;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-group label {
+    flex: 1;
+    text-align: right;
+}
+
+label[for="usuario"],
+label[for="contrasenia"] {
+    font-weight: bold;
+    color: #1a2759;
+}
+
+.button {
+    width: 50%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #1a2759;
+    margin-top: 30px;
+    border-radius: .5rem;
+    padding: 1rem 10rem;
+}
+
+/* Estilos bienvenida */
+#bienvenida-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 5rem;
+    align-items: flex-start;
+    height: 100%;
+}
+
+#bloques-bienvenida {
+    width: 40%;
+}
+
+.titulo.bienvenida {
+    width: 100%;
+}
+
+.mazinger-bienvenida {
+    display: flex;
+    justify-content: right;
+    margin-right: 0;
+}
+
+.img-mazinger-bienvenida {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    z-index: 1;
+}
+
+.niveles,
+#bienvenido {
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    width: 100%;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#bienvenido {
+    font-size: 2rem;
+    height: 5rem;
+    background-color: #1a2759;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#nivel-titulo {
+    background-color: #df0a0f;
+    margin-bottom: 1rem;
+}
+
+.niveles p {
+    background-color: #1a2759;
+    margin: .2rem;
+    padding: 1rem;
+}
+
+.nivel-juego.nivel-hover {
+    background-color: #eec315;
+    cursor: pointer;
+}
+
+.nivel-juego.nivel-seleccionado {
+    background-color: #eec315;
+}
+
+#instrucciones h2 {
+    color: white;
+}
+
+#instrucciones {
+    background-color: #a8cbc7;
+    color: #1a2759;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: small;
+    font-weight: bold;
+
+    padding: 15px;
+    border-radius: 8px;
+    width: 30%;
+
+}
+
+#instrucciones div,
+#instrucciones p {
+    background-color: white;
+}
+
+#jugar-button {
+    width: 100%;
+    height: 3rem;
+    background-color: #ffee6b;
+    border: none;
+    font-size: 2rem;
+    color: #1a2759;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos juego */
+#juego-section {
+    display: grid;
+    grid-template-columns: minmax(30rem, 1fr) 2fr auto .8fr;
+    gap: 20px;
+    padding: 20px;
+    font-style: italic;
+    height: 90%;
+    justify-items: center;
+}
+
+.img-mazinger-juego {
+    display: flex;
+    object-fit: cover;
+    max-width: 120%;
+    height: 100%;
+}
+
+.nivel-titulo,
+#finalizar-button {
+    background: linear-gradient(to left, #de2411 90%, white);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 90%;
+    cursor: pointer;
+}
+
+#palabra-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #252525;
+    color: white;
+    font-weight: bold;
+    width: 5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 3.5rem;
+}
+
+#tablero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos tablero */
+#tablero {
+    display: grid;
+    gap: 1px;
+    width: 90%;
+    height: 100%;
+    background-color: #1a2759;
+    padding: 1rem;
+}
+
+.celda {
+    background-color: #efc416;
+    border: 1px solid #333;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #efc416;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.celda.seleccionada {
+    background-color: #de2411;
+    color: white
+}
+
+/* Si la letra seleccionada coincide con la letra esperada */
+.celda.acertada {
+    background-color: #74787a;
+    color: #313f44;
+    box-shadow: none;
+    transform: none;
+    cursor: default;
+}
+
+/* Hover visual, pero solo si no está acertada */
+.celda:not(.acertada):hover {
+    transform: scale(1.05);
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+/* Seccion evolucion del juego */
+#evolucion-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: linear-gradient(to bottom, #e24a39 1%, white);
+    font-weight: bold;
+    align-items: center;
+    /* max-height: 100%; */
+}
+
+.img-mazinger-logo {
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+}
+
+#tiempo-restante {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+#temporizador {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    background-color: #eec315;
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-size: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#finalizar-button {
+    font-style: italic;
+    font-weight: bold;
+    border: none;
+    width: 80%;
+}
+
+#resultado-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 90vh;
+}
+
+.img-mazinger-resultado {
+    width: 40vw;
+}
+
+.resultado {
+    width: 40vw;
+    max-height: 90vh;
+}
+
+#botones-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #f0db39;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+#resultado-mensaje {
+    text-align: center;
+    width: 100vw;
+    color: #1a2759;
+    font-size: 40px;
+    font-weight: bold;
+}
+.button.resultado {
+    width: 5vw;
+    font-size: 3vh;
+}

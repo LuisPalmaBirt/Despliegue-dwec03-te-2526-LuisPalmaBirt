@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    </link>
+    <title>Memorama Mazinger Z</title>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <section id="login-section">
+            <div class="titulo">
+                <h1>MEMORAMA <br>MAZINGER <span id="z">Z</span></h1>
+            </div>
+            <div class="mazinger-login">
+                <img src="img/Mazinger1.png" alt="mazinger" class="img-mazinger-login">
+            </div>
+            <form id="login-form">
+                <h2>LOGIN</h2>
+                <div class="form-group">
+                    <label for="usuario">USUARIO</label>
+                    <input type="text" id="usuario" name="usuario">
+                </div>
+                <div class="form-group">
+
+                    <label for="contrasenia">CONTRASEÑA</label>
+                    <input type="text" id="contrasenia" name="contrasenia">
+                </div>
+                <button id="entrar-button" class="button" type="button">ENTRAR</button>
+            </form>
+        </section>
+        <section id="bienvenida-section">
+            <section id="bloques-bienvenida">
+                <p id="bienvenido">BIENVENIDO A</p>
+
+                <div class="titulo bienvenida">
+                    <h1>MEMORAMA <br>MAZINGER <span id="z">Z</span></h1>
+                </div>
+                <section class="niveles">
+                    <p id="nivel-titulo">NIVEL</p>
+                    <p class="nivel-juego">PRINCIPIANTE</p>
+                    <p class="nivel-juego">INTERMEDIO</p>
+                    <p class="nivel-juego">AVANZADO</p>
+                </section>
+            </section>
+            <section id="instrucciones">
+                <h2>INSTRUCIONES</h2>
+                <div>
+                    <p>El objetivo del juego es construir la palabra "mazinger" usando tu memoria y concentración.
+                        <br>
+                        <br>
+                        🔄 Haz clic en una bloque para revelar qué letra oculta. Si la letra es la "m" ya puedes
+                        comenzar a
+                        construir la palabra.
+                        <br>
+                        <br>
+                        🧩 Luego, haz clic en otro bloque para intentar encontrar la siguiente letra.
+                        <br>
+                        <br>
+                        ✅ Si la letra corresponde con la construción de "mazinger" , permanecerá visibles siempre que
+                        sea la
+                        que falte.
+                        <br>
+                        <br>
+                        ❌ Si no es la letra faltante, se ocultará.
+                        <br>
+                        <br>
+                        🏁 El juego termina cuando construyes la palabra "Mazinger".
+                    </p>
+                </div>
+                <p>
+                    Reglas:
+                    Solo puedes tener un bloque visible cada vez, con expcepción de las letras que ya has acertado.
+                    <br>
+                    <br>
+                    ¡Intenta completar el juego en 30 segundos!
+                    <br>
+                    <br>
+                    🎯 ¡Pon a prueba tu memoria y diviértete!
+                </p>
+                <button id="jugar-button">JUGAR</button>
+            </section>
+            <section>
+                <img src="img/Mazinger2.png" alt="mazinger" class="img-mazinger-bienvenida">
+            </section>
+        </section>
+        <section id="juego-section">
+            <section id="imagen-juego-section">
+                <img src="img/Mazinger3.png" alt="mazinger" class="img-mazinger-juego">
+            </section>
+            <section id="tablero-section">
+                <h2 class="nivel-titulo"></h2>
+                <section id="tablero"></section>
+            </section>
+            <section id="palabra-section"></section>
+            <section id="evolucion-section">
+                <img src="img/Mazinger-logo.png" alt="mazinger-logo" class="img-mazinger-logo">
+                <p id="tiempo-restante">TIEMPO RESTANTE</p>
+                <p id="temporizador"></p>
+                <button id="finalizar-button">FINALIZAR<br>PARTIDA</button>
+            </section>
+        </section>
+        <section id="resultado-section">
+            <img src="img/Mazinger4.png" class="img-mazinger-resultado" alt="mazinger">
+            <div class="resultado">
+                <div class="titulo">
+                    <h1>MEMORAMA <br>MAZINGER <span id="z">Z</span></h1>
+                </div>
+                <div id="botones-area">
+                    <p id="resultado-mensaje"></p>
+                    <button class="button resultado" id="reiniciar" type="submit">REINICIAR</button>
+                    <button class="button resultado" id="salir" type="submit">SALIR</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="js/jquery_4.0.0.js"></script>
+    <script type="module" src="js/tablero.js"></script>
+    <script type="module" src="js/niveles.js"></script>
+    <script type="module" src="js/juego.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
